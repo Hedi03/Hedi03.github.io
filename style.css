@@ -1,0 +1,277 @@
+.photo{
+    width:200px;
+    height:200px;
+    border-radius:100%;
+    object-fit:cover;
+    border:4px solid white;
+    margin-bottom:15px;
+}
+
+:root {
+    --blue: #1e3a5f;
+    --blue-light: #e0eaf5;
+    --text: #263445;
+    --muted: #64748b;
+    --border: #dbe4ee;
+    --background: #edf2f8;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+    background: var(--background);
+}
+
+
+.hero {
+    max-width: 1050px;
+    margin: 28px auto 0;
+    padding: 48px 42px;
+    background: linear-gradient(135deg, #ffffff, #e8f0f8);
+    border-top: 5px solid var(--blue);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+
+.hero-content {
+    max-width: 700px;
+}
+
+.eyebrow {
+    margin: 0 0 8px;
+    color: var(--blue);
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+h1 {
+    margin: 0;
+    color: var(--blue);
+    font-size: clamp(2rem, 5vw, 3.1rem);
+    line-height: 1.15;
+}
+
+.subtitle {
+    margin: 12px 0 6px;
+    font-size: 1.15rem;
+    font-weight: bold;
+}
+
+.intro {
+    margin: 0 0 22px;
+    color: var(--muted);
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 18px;
+    background: var(--blue);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.button:hover {
+    background: #163a55;
+}
+
+.initials {
+    width: 112px;
+    height: 112px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    background: var(--blue-light);
+    border: 2px solid #c9d9e5;
+    border-radius: 50%;
+    color: var(--blue);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+
+.navigation {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 12px 16px;
+    background: #dce6f0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+
+.navigation a {
+    padding: 7px 12px;
+    color: var(--blue);
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.navigation a:hover {
+    background: white;
+    border-radius: 4px;
+}
+
+.container {
+    max-width: 1050px;
+    margin: 24px auto;
+    padding: 0 18px;
+}
+
+.section {
+    margin-bottom: 18px;
+    padding: 28px 32px;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    scroll-margin-top: 75px;
+}
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 12px;
+}
+
+.section-number {
+    color: #718da3;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+h2 {
+    margin: 0;
+    color: var(--blue);
+    font-size: 1.5rem;
+}
+
+h3 {
+    margin: 0 0 8px;
+    color: #2d536f;
+    font-size: 1.08rem;
+}
+
+p {
+    margin-top: 0;
+}
+
+.columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+}
+
+li {
+    margin-bottom: 7px;
+}
+
+.timeline-item {
+    margin: 0 0 22px;
+    padding-left: 16px;
+    border-left: 3px solid #b8ccda;
+}
+
+.date {
+    margin-bottom: 5px;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.project {
+    padding: 16px 18px;
+    margin-bottom: 12px;
+    background: #f8fafb;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+}
+
+.project p {
+    margin-bottom: 0;
+}
+
+.contact-section a {
+    color: var(--blue);
+}
+
+.note {
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    background: #e7edf2;
+    color: #526575;
+    border-top: 1px solid var(--border);
+}
+
+footer p {
+    margin: 0;
+}
+
+@media (max-width: 650px) {
+    .hero {
+        margin-top: 0;
+        padding: 32px 22px;
+        align-items: flex-start;
+    }
+
+    .initials {
+        width: 68px;
+        height: 68px;
+        font-size: 1.35rem;
+    }
+
+    .navigation {
+        position: static;
+        gap: 0;
+    }
+
+    .navigation a {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+
+    .section {
+        padding: 22px 18px;
+    }
+
+    .columns {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+}
+
+@media (max-width: 420px) {
+    .hero {
+        display: block;
+    }
+
+    .initials {
+        margin-top: 20px;
+    }
+}
